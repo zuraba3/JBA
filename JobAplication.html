@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Job Aplication</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+		header{
+			background-color: #66ff99;
+			height: 150px;
+			text-align: center;
+			padding-top: 40px;
+		}
+		footer{
+			background-color: #66ff99;
+			height: 70px;
+			text-align: center;
+			
+		}
+		span{
+			color:red;
+			font-weight: bold;
+		}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Job Aplication</h1>
+		</header>
+		<nav></nav>
+		<section>
+			<article>
+			<form id="F_send" action=".php">
+				<label for="Name">სახელი<span>*</span></label><br>
+				<input type="text" name="Name" id="Name" placeholder="სახელი" required><br>
+				<label for="surName">გვარი<span>*</span></label><br>
+				<input type="text" name="surName" id="surName" placeholder="გვარი"><br>
+				<label for="Email">ელ.ფოსტა<span>*</span></label><br>
+				<input type="email" name="Email" id="Email" placeholder="ელ.ფოსტა"><br>
+				<label for="Phone">ტელეფონი<span>*</span></label><br>
+				<input type="tel" name="Phone" id="Phone" placeholder="ტელეფონი" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required><br>
+				<label for="JobPosition">სასურველი სამუშაო პოზიცია<span>*</span></label><br>
+				<select name="JobPosition">
+					<option></option>
+					<option>Job1</option>
+					<option>Job2</option>
+					<option>Job3</option>
+				</select>
+				<br>
+				<label for="Date">სამუშაოს დაწყების სასურველი თარიღი<span>*</span></label><br>
+				<input type="date" name="Date" id="Date"><br>
+				<label for="status">მიმდინარე სამუშაო სტატუსი<span>*</span></label><br>
+				<input type="radio" name="status">ვმუშაობ<br>
+				<input type="radio" name="status">არ ვმუშაობ<br>
+				<input type="radio" name="status">თვითდასაქმებული ვარ<br>
+				<input type="radio" name="status">სტუდენტი<br>
+				CV <input type="file">
+				<!--<input type="submit">-->
+				<input type="button" value="submit" onclick="Send();">
+			</form>
+			<script>
+			function Send(){
+				
+				documen.getElementById('F_send').submit();
+			}
+			</script>
+			</article>
+		</section>
+		<footer><h1>ყველა უფლება დაცულია &copy; 2023</h1></footer>
+	</body>
+
+</html>
